@@ -1,0 +1,44 @@
+.navbar {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 5rem;
+}
+
+.navbar .d-block {
+  display: block;
+}
+
+.navbar .d-none {
+  display: none;
+}
+
+a {
+  color: wheat;
+}
+
+.fa-bars {
+  display: none;
+}
+
+.nav-desktop a {
+  margin: 0rem 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .fa-bars {
+    display: block;
+  }
+  .nav-desktop {
+    display: none;
+  }
+}
+
+.fa-bars::before {
+  color: white;
+}
+/*# sourceMappingURL=nav.css.map */

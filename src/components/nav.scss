@@ -1,0 +1,34 @@
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  .d-block {
+    display: block;
+  }
+  .d-none {
+    display: none;
+  }
+}
+a {
+  color: wheat;
+}
+.fa-bars {
+  display: none;
+}
+.nav-desktop {
+  a {
+    margin: 0rem 0.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .fa-bars {
+    display: block;
+  }
+  .nav-desktop {
+    display: none;
+  }
+}
+.fa-bars::before {
+  color: white;
+}

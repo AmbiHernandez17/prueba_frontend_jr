@@ -1,0 +1,79 @@
+.bg {
+  background-color: #1b1818;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg .modal {
+  background-color: #333030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+}
+
+.bg .modal label {
+  color: white;
+}
+
+.bg .modal input {
+  margin-bottom: 1.5rem;
+}
+
+.bg .alert {
+  background-color: #c53a2b;
+  color: black;
+}
+
+.bg .d-block {
+  display: block;
+}
+
+.bg .d-none {
+  display: none;
+}
+
+.bg .bv-art {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bg img {
+  height: 100%;
+  width: 3rem;
+}
+
+.bg p {
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.bg .btn-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+/*# sourceMappingURL=bienvenida.css.map */

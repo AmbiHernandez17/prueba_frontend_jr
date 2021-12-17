@@ -1,0 +1,49 @@
+.bg {
+  background-color: rgb(27, 24, 24);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal {
+    background-color: rgb(51, 48, 48);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    label {
+      color: white;
+    }
+    input {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .alert {
+    background-color: rgb(197, 58, 43);
+    color: black;
+  }
+  .d-block {
+    display: block;
+  }
+  .d-none {
+    display: none;
+  }
+  .bv-art {
+    display: flex;
+    background-color: black;
+    width: fit-content;
+    height: 3rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  img {
+    height: 100%;
+    width: 3rem;
+  }
+  p {
+    color: white;
+    margin-left: 0.5rem;
+  }
+  .btn-right{
+      display: flex;
+      justify-content: end;
+  }
+}
