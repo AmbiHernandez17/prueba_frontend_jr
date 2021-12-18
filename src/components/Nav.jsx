@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "./nav.css";
 
 const Nav = () => {
+  const showSearchBtn = useSelector(state => state.showSearchBtn)
   const [showHamBtn, setShowHamBtn] = useState(false);
   return (
     <>
@@ -25,7 +27,7 @@ const Nav = () => {
           </div>
         </i>
       </nav>
-      <a href="/inicio#busqueda" className="fixed-btn fas fa-search"></a>
+      <a href="/inicio#busqueda" className={`${showSearchBtn ? "d-block" : "d-none"}fixed-btn fas fa-search`}></a>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 
-const initialState = { name: "", artists: [], searchHistory: [] };
+const initialState = { name: "", artists: [], searchHistory: [],showSearchBtn:false };
 const userReducer = createReducer(initialState, (builder) => {
   builder
     .addCase("ADD_ARTIST", (state, action) => {
@@ -30,6 +30,10 @@ const userReducer = createReducer(initialState, (builder) => {
         state.searchHistory.unshift(action.payload);
       }
       return state;
-    });
+    })
+    .addCase("SHOW_SEARCH_BTN", (state, action) => {
+      state.showSearchBtn = true;
+      return state;
+    })
 });
 export default userReducer;

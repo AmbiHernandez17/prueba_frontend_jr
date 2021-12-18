@@ -84,7 +84,7 @@ const Bienvenida = () => {
               userName && artists.length === 3
                 ? dispatch({ type: "ADD_NAME", payload: userName }) &&
                   dispatch({ type: "BULKADD_ARTIST", payload: artists }) &&
-                  history.push("/inicio")
+                  history.push("/inicio") && dispatch({type:"SHOW_SEARCH_BTN"})
                 : alert("Hay campos por completar");
             }}
           ></button>
