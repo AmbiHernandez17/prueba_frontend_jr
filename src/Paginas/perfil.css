@@ -1,0 +1,44 @@
+.artist-perfil {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.5rem;
+}
+
+.artist-perfil img {
+  height: 5rem;
+}
+
+.artist-perfil .delete-item {
+  color: red;
+  background-color: black;
+  border: none;
+  padding: 0rem 2rem;
+}
+
+h1 {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 3rem;
+}
+
+.container-perfil {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .container-perfil {
+    width: 100vw;
+  }
+}
+/*# sourceMappingURL=perfil.css.map */

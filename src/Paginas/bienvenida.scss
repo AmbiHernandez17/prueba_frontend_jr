@@ -26,24 +26,8 @@
   .d-none {
     display: none;
   }
-  .bv-art {
-    display: flex;
-    background-color: black;
-    width: fit-content;
-    height: 3rem;
-    padding-right: 1rem;
-    margin-bottom: 1rem;
-  }
-  img {
-    height: 100%;
-    width: 3rem;
-  }
-  p {
-    color: white;
-    margin-left: 0.5rem;
-  }
   .btn-right{
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
   }
 }

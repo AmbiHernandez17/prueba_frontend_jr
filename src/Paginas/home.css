@@ -1,0 +1,99 @@
+h2 {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 3rem;
+}
+
+.m-art {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0rem 3rem;
+}
+
+.addArtist {
+  height: 4rem;
+  width: 4rem;
+  background-color: #597a17;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.busq {
+  margin-top: 4rem;
+}
+
+.busq .searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.busq .fa-search {
+  font-size: 1.2rem;
+}
+
+.busq input {
+  height: 2.5rem;
+  width: 40vw;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 400px) {
+  .busq input {
+    width: 50vw;
+  }
+}
+
+.alert {
+  background-color: #c53a2b;
+  color: black;
+  width: 40%;
+  height: 3rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.addArtistSearch {
+  height: 4rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,29 @@
+.artist-perfil{
+       background-color: black;
+       display: flex;
+       justify-content: space-between;
+       margin: 1.5rem;
+       img{
+           height: 5rem;
+       }
+       .delete-item{
+           color: red;
+           background-color: black;
+           border: none;
+           padding: 0rem 2rem;
+       }
+    }
+    h1{
+     color: white;
+     display: flex;
+     justify-content: flex-start;
+     margin: 3rem;
+    }
+.container-perfil{
+    width: 80vw;
+    margin: 0 auto;
+} @media screen and (max-width:500px){
+    .container-perfil{
+        width: 100vw;
+    }
+}

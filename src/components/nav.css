@@ -18,7 +18,7 @@
 }
 
 a {
-  color: wheat;
+  color: white;
 }
 
 .fa-bars {
@@ -40,5 +40,53 @@ a {
 
 .fa-bars::before {
   color: white;
+}
+
+.fixed-btn::before {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 1000;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #1010ad;
+  font-size: 1.5rem;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hamburger-btn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 6 rem;
+  width: 8rem;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  margin-top: 2.3rem;
+  padding: 1rem;
+}
+
+.hamburger-btn a {
+  margin-bottom: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=nav.css.map */

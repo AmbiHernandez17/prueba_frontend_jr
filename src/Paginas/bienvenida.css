@@ -45,35 +45,12 @@
   display: none;
 }
 
-.bg .bv-art {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 3rem;
-  padding-right: 1rem;
-  margin-bottom: 1rem;
-}
-
-.bg img {
-  height: 100%;
-  width: 3rem;
-}
-
-.bg p {
-  color: white;
-  margin-left: 0.5rem;
-}
-
 .bg .btn-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=bienvenida.css.map */

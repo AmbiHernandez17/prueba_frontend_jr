@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "./bienvenida.css";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import Artist from "../components/Artist";
 
 const Bienvenida = () => {
   const [userName, setuserName] = useState(null);
   const [artist, setArtist] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
   const [artists, setArtists] = useState([]);
+  const dispatch = useDispatch()
   const handleAddArtist = async () => {
     try {
       const { data } = await axios.get(
@@ -20,7 +23,7 @@ const Bienvenida = () => {
         const obj = { idArtist, strArtist, strArtistThumb };
         setArtists([...artists, obj]);
       }
-    } catch (error) {}
+    } catch (error) {console.log(error)}
   };
   return (
     <div className="bg">
@@ -59,16 +62,16 @@ const Bienvenida = () => {
         <div>
           {artists ? artists.map((item) => {
             return (
-              <div className="bv-art">
-                <img src={item.strArtistThumb} alt={item.strArtist} />
-                <p>{item.strArtist}</p>
-              </div>
+            <Artist item= {item}/>
             );
           }):null}
         </div>
         <div className="btn-right">
-            <a href="/">
-                <button className="fas fa-arrow-right"></button>
+            <a href="/inicio">
+                <button className="fas fa-arrow-right" onClick={()=>{
+                    dispatch({type:"ADD_NAME", payload:userName})
+                    dispatch({type:"BULKADD_ARTIST", payload:artists})
+                }}></button>
             </a>
         </div>
       </div>
