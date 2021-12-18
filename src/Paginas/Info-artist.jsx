@@ -31,7 +31,7 @@ const InfoArtist = () => {
         }
       };
       getAlbums();
-  }, []);
+  });
   return (
     <div className="info-artist-container">
       <img

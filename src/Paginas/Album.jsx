@@ -30,7 +30,7 @@ const Album = () => {
       }
     };
     getSongs();
-  }, []);
+  });
   return (
     <div>
       <div className="container-album">

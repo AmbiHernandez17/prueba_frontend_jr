@@ -3,11 +3,13 @@ import Artist from "../components/Artist";
 import "./home.css";
 import ArtistAlbums from "../components/Artist-albums";
 import { useState } from "react";
+import { useHistory } from "react-router";
 import axios from "axios";
 
 const Home = () => {
   const state = useSelector((state) => state);
-  const [searchArtist, setSearchArtist] = useState(null);
+  const history = useHistory()
+  const [searchArtist, setSearchArtist] = useState("");
   const [artist, setArtist] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
   const dispatch = useDispatch();
@@ -45,7 +47,7 @@ const Home = () => {
                 return <Artist key={item.idArtist} item={item} />;
               })
             : null}
-          <a href="/inicio#busqueda" className="fas fa-plus addArtist"></a>
+          <p onClick={()=>{history.push("/inicio#busqueda")}} className="fas fa-plus addArtist"></p>
         </div>
         <div className="artistDetails">
           {state.artists

@@ -6,8 +6,8 @@ import { useHistory } from "react-router";
 import Artist from "../components/Artist";
 
 const Bienvenida = () => {
-  const [userName, setuserName] = useState(null);
-  const [artist, setArtist] = useState(null);
+  const [userName, setuserName] = useState("");
+  const [artist, setArtist] = useState("");
   const history = useHistory();
   const [showAlert, setShowAlert] = useState(false);
   const [artists, setArtists] = useState([]);
@@ -17,7 +17,7 @@ const Bienvenida = () => {
     if (state.artists.length !== 0 ) {
       history.push("/inicio")
     }
-  }, [])
+  })
   const handleAddArtist = async () => {
     try {
       const { data } = await axios.get(
@@ -73,7 +73,7 @@ const Bienvenida = () => {
         <div className="artists-to-add">
           {artists
             ? artists.map((item) => {
-                return <Artist item={item} />;
+                return <Artist key={item.idArtist} item={item} />;
               })
             : null}
         </div>
@@ -83,8 +83,8 @@ const Bienvenida = () => {
             onClick={() => {
               userName && artists.length === 3
                 ? dispatch({ type: "ADD_NAME", payload: userName }) &&
-                  dispatch({ type: "BULKADD_ARTIST", payload: artists }) &&
-                  history.push("/inicio") && dispatch({type:"SHOW_SEARCH_BTN"})
+                  dispatch({ type: "BULKADD_ARTIST", payload: artists }) &&dispatch({type:"SHOW_SEARCH_BTN"})
+                  && history.push("/inicio") 
                 : alert("Hay campos por completar");
             }}
           ></button>

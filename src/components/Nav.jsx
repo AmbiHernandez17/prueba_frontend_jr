@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import "./nav.css";
 
 const Nav = () => {
   const showSearchBtn = useSelector(state => state.showSearchBtn)
+  const history = useHistory()
   const [showHamBtn, setShowHamBtn] = useState(false);
   return (
     <>
@@ -27,7 +29,7 @@ const Nav = () => {
           </div>
         </i>
       </nav>
-      <a href="/inicio#busqueda" className={`${showSearchBtn ? "d-block" : "d-none"}fixed-btn fas fa-search`}></a>
+      <p onClick={()=>{history.push("/inicio#busqueda")}} className={`${showSearchBtn ? "" : "d-none "}fixed-btn fas fa-search`}></p>
     </>
   );
 };

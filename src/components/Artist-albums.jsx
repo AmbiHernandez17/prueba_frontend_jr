@@ -18,7 +18,7 @@ const ArtistAlbums = ({ artist }) => {
       }
     };
     getAlbums();
-  }, []);
+  });
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
