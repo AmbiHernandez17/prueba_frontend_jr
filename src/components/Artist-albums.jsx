@@ -12,10 +12,7 @@ const ArtistAlbums = ({ artist }) => {
         const { data } = await axios.get(
           `https://theaudiodb.com/api/v1/json/2/album.php?i=${artist.idArtist}`,
         );
-        console.log(data.album);
-        console.log("hola");
         setAlbums(data.album);
-        console.log(albums);
       } catch (error) {
         console.log(error);
       }
@@ -45,7 +42,9 @@ const ArtistAlbums = ({ artist }) => {
       <p className="artist-name">{artist.strArtist}</p>
       <div className="container">
         <a href={`/artista/${artist.idArtist}`}>
-          <img className="img-artist-album" src={artist.strArtistThumb} alt={artist.strArtist} />
+          <img className="img-artist-album" src={artist.strArtistThumb
+                          ? artist.strArtistThumb
+                          : "https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc="} alt={artist.strArtist} />
         </a>
         <Carousel
           swipeable={true}
@@ -59,7 +58,7 @@ const ArtistAlbums = ({ artist }) => {
           customTransition="all .5"
           transitionDuration={500}
           containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet","small", "mobile"]}
+          removeArrowOnDeviceType={[]}
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
         >

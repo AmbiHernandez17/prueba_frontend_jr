@@ -10,6 +10,8 @@ import {
   Redirect,
 } from "react-router-dom";
 import Perfil from "./Paginas/Perfil";
+import InfoArtist from "./Paginas/Info-artist";
+import Album from "./Paginas/Album";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Redirect from="/home" to="/inicio" />
           <Route path="/inicio" component={Home} exact />
           <Route path="/perfil" component={Perfil} exact />
+          <Route path="/artista/:idArtista" component={InfoArtist} exact />
+          <Route path="/album/:idAlbum" component={Album} exact />
         </Switch>
       </Router>
     </div>

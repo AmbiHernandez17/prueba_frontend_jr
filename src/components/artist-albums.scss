@@ -40,11 +40,19 @@
 .img-album-container:hover .over {
   transition: 0.4s ease-in;
   transform: translateY(0%);
-  
 }
-.artist-name{
-    font-size: 1.5rem;
-    display: flex;
-    margin: 1.5rem;
-
+.artist-name {
+  font-size: 1.5rem;
+  display: flex;
+  margin: 1.5rem;
+}
+@media screen and (min-width: 300px) and (max-width: 350px) {
+  .img-album {
+    width: 7rem;
+    height: 7rem;
+  }
+  .img-artist-album {
+    width: 7rem;
+    height: 7rem;
+  }
 }

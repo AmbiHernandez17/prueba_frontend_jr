@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./bienvenida.css";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
 import Artist from "../components/Artist";
 
 const Bienvenida = () => {
   const [userName, setuserName] = useState(null);
   const [artist, setArtist] = useState(null);
+  const history = useHistory();
   const [showAlert, setShowAlert] = useState(false);
   const [artists, setArtists] = useState([]);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const state = useSelector(state => state)
+  useEffect(() => {
+    if (state.artists.length !== 0 ) {
+      history.push("/inicio")
+    }
+  }, [])
   const handleAddArtist = async () => {
     try {
       const { data } = await axios.get(
@@ -17,13 +25,15 @@ const Bienvenida = () => {
       );
       if (data.artists === null) {
         setShowAlert(true);
-      } else {
-          setShowAlert(false)
+      } else if (artists.length < 3) {
+        setShowAlert(false);
         const { idArtist, strArtist, strArtistThumb } = data.artists[0];
         const obj = { idArtist, strArtist, strArtistThumb };
         setArtists([...artists, obj]);
       }
-    } catch (error) {console.log(error)}
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="bg">
@@ -60,19 +70,23 @@ const Bienvenida = () => {
           Lo sentimos el artista que buscas no ha sido encontrado, por favor ingrese otro.
         </div>
         <div>
-          {artists ? artists.map((item) => {
-            return (
-            <Artist item= {item}/>
-            );
-          }):null}
+          {artists
+            ? artists.map((item) => {
+                return <Artist item={item} />;
+              })
+            : null}
         </div>
         <div className="btn-right">
-            <a href="/inicio">
-                <button className="fas fa-arrow-right" onClick={()=>{
-                    dispatch({type:"ADD_NAME", payload:userName})
-                    dispatch({type:"BULKADD_ARTIST", payload:artists})
-                }}></button>
-            </a>
+          <button
+            className="fas fa-arrow-right"
+            onClick={() => {
+              userName && artists.length === 3
+                ? dispatch({ type: "ADD_NAME", payload: userName }) &&
+                  dispatch({ type: "BULKADD_ARTIST", payload: artists }) &&
+                  history.push("/inicio")
+                : alert("Hay campos por completar");
+            }}
+          ></button>
         </div>
       </div>
     </div>

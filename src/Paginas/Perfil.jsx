@@ -42,11 +42,11 @@ const Perfil = () => {
         {state.artists
           ? state.artists.map((item) => {
               return (
-                <div className="artist-perfil">
-                  <div className="d-flex">
+                <div className="artist-perfil" >
+                  <a href={`/artista/${item.idArtist}`} className="d-flex text-decoration-none">
                     <img src={item.strArtistThumb} alt={item.strArtist} />
                     <p>{item.strArtist}</p>
-                  </div>
+                  </a>
                   <button
                     className="far fa-trash-alt delete-item"
                     onClick={() => {

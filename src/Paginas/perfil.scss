@@ -19,10 +19,15 @@
      justify-content: flex-start;
      margin: 3rem;
     }
+    
 .container-perfil{
     width: 80vw;
     margin: 0 auto;
-} @media screen and (max-width:500px){
+}
+.text-decoration-none{
+    text-decoration: none;
+} 
+@media screen and (max-width:500px){
     .container-perfil{
         width: 100vw;
     }

@@ -36,6 +36,10 @@ h1 {
   margin: 0 auto;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
   .container-perfil {
     width: 100vw;

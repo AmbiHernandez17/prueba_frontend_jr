@@ -1,5 +1,8 @@
 .navbar {
   background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
   display: flex;
   justify-content: space-between;
   padding: 2rem 5rem;
@@ -9,8 +12,12 @@
   .d-none {
     display: none;
   }
+  a{
+    font-size: 1.2rem;
+  }
 }
 a {
+  text-decoration: none;
   color: white;
 }
 .fa-bars {
