@@ -83,7 +83,7 @@ const Home = () => {
             <>
               <h2>Resultado de busqueda</h2>
               <div className="d-flex">
-                <Artist item={artist} />{" "}
+                <Artist item={artist} />
                 <button
                   className="fas fa-plus addArtistSearch"
                   onClick={() => {

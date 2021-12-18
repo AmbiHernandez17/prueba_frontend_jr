@@ -60,6 +60,7 @@ const Bienvenida = () => {
           />
           <button
             onClick={() => {
+              setArtist("")
               handleAddArtist();
             }}
           >
@@ -69,7 +70,7 @@ const Bienvenida = () => {
         <div className={`alert ${showAlert ? "d-block" : "d-none"}`}>
           Lo sentimos el artista que buscas no ha sido encontrado, por favor ingrese otro.
         </div>
-        <div>
+        <div className="artists-to-add">
           {artists
             ? artists.map((item) => {
                 return <Artist item={item} />;

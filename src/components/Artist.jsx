@@ -3,7 +3,7 @@ import "./artist.css";
 const Artist = ({ item }) => {
   return (
     <a href={`/artista/${item.idArtist}`} className="bv-art">
-      <img
+      <img className="artist-img"
         src={
           item.strArtistThumb
             ? item.strArtistThumb

@@ -18,6 +18,10 @@ h2 {
   margin: 0rem 3rem;
 }
 
+.m-art a {
+  margin: 0 0 1rem 1rem;
+}
+
 .addArtist {
   height: 4rem;
   width: 4rem;
@@ -93,7 +97,6 @@ h2 {
 }
 
 .addArtistSearch {
-  height: 4rem;
   border: none;
   background-color: black;
   color: white;

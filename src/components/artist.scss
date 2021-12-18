@@ -2,10 +2,13 @@
     display: flex;
     background-color: black;
     width: fit-content;
-    height: 4rem;
+    height: fit-content;
     padding-right: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    .artist-img{
+      width: 4rem;
+      height: 100%;
+    }
   }
   p {
     color: white;

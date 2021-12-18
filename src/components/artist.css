@@ -6,10 +6,16 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 4rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.bv-art .artist-img {
+  width: 4rem;
+  height: 100%;
 }
 
 p {

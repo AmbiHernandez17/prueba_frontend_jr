@@ -8,6 +8,9 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0rem 3rem;
+  a {
+    margin: 0 0 1rem 1rem;
+  }
 }
 .addArtist {
   height: 4rem;
@@ -60,7 +63,6 @@ h2 {
   display: flex;
 }
 .addArtistSearch {
-  height: 4rem;
   border: none;
   background-color: black;
   color: white;

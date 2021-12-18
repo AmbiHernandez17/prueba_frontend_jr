@@ -26,6 +26,11 @@
   .d-none {
     display: none;
   }
+  .artists-to-add{
+    a{
+      margin: 0 0 1rem 1rem;
+    }
+  }
   .btn-right{
       display: flex;
       justify-content: flex-end;

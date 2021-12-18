@@ -45,6 +45,10 @@
   display: none;
 }
 
+.bg .artists-to-add a {
+  margin: 0 0 1rem 1rem;
+}
+
 .bg .btn-right {
   display: -webkit-box;
   display: -ms-flexbox;
